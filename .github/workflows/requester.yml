@@ -1,0 +1,14 @@
+name: scheduled-requester
+
+on:
+  schedule:
+    - cron: '*/14 * * * *'   # her 14 dakikada bir
+  workflow_dispatch:         # elle çalıştırma opsiyonu
+
+jobs:
+  call-url:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call URL
+        run: |
+          curl -sSf -H "User-Agent: keepalive-bot/1.0" "https://example.com/endpoint" || echo "Request failed"
