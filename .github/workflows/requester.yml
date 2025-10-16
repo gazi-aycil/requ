@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Call URL
         run: |
-          curl -sSf -H "User-Agent: keepalive-bot/1.0" "https://example.com/endpoint" || echo "Request failed"
+          curl -sSf -H "User-Agent: keepalive-bot/1.0" "https://katalog-2uel.onrender.com/api/health" || echo "Request failed"
